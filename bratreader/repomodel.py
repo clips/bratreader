@@ -1,7 +1,6 @@
 from annotateddocument import AnnotatedDocument
 from annotationimporter import importann
 from glob import iglob
-from _xml import importxml
 
 import os
 
