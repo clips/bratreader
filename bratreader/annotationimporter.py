@@ -27,7 +27,6 @@ def importann(pathtofile):
         char_index += len(line)+1
 
     _join(annotations.values(), sentences)
-    print(len(sentences[0].words), len(annotations))
     return sentences
 
 
