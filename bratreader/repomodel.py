@@ -37,6 +37,7 @@ class RepoModel(object):
                 # The key of each document is the document name without
                 # the suffix (i.e. "001.ann" becomes "001")
                 key = os.path.splitext(path)[0]
+                key = os.path.split(key)[-1]
                 context = importann(path)
                 self.documents[key] = AnnotatedDocument(key, context)
 
