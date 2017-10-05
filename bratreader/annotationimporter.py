@@ -24,7 +24,7 @@ def importann(pathtofile):
 
     for sent_index, line in enumerate(open(path + ".txt")):
         sentences.append(Sentence(sent_index, line, char_index))
-        char_index += len(line)+1
+        char_index += len(line)
 
     _join(annotations.values(), sentences)
     return sentences
