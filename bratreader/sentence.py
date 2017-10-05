@@ -20,7 +20,6 @@ class Sentence(object):
 
             start = start
             end = start+len(w)
-
             self.words.append(Word(key=windex,
                                    sentkey=self.key,
                                    form=w,
@@ -40,7 +39,3 @@ class Sentence(object):
                 (word.start <= start < word.end)
                 or (word.start < end <= word.end)
                 or (start < word.start < end and start < word.end < end)]
-
-    def __repr__(self):
-        """Representation as string."""
-        return " ".join([x.form for x in self.words])

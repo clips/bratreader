@@ -22,7 +22,7 @@ def importann(pathtofile):
 
     char_index = 0
 
-    for sent_index, line in enumerate(open(path + ".txt")):
+    for sent_index, line in enumerate(open(path + ".txt", encoding='utf-8')):
         sentences.append(Sentence(sent_index, line, char_index))
         char_index += len(line)
 
@@ -65,7 +65,7 @@ def _createannotationobjects(annotations):
     for key, t in annotations.items():
         splitted = t.split("\t")
         t = splitted[0]
-        repr = " ".join(splitted[1:])
+        repr = u" ".join(splitted[1:])
 
         split = t.split()
         label = split[0]

@@ -1,6 +1,3 @@
-__author__ = 'stephantulkens'
-
-
 class Word(object):
 
     def __init__(self, key, sentkey, form, start, end):
@@ -19,7 +16,3 @@ class Word(object):
         self.start = start
         self.end = end
         self.annotations = []
-
-    def __repr__(self):
-        """Form."""
-        return self.form
