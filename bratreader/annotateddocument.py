@@ -79,5 +79,5 @@ class AnnotatedDocument(object):
 
         document.append(annotations)
 
-        with open(pathtofile, 'w') as f:
+        with open(pathtofile, 'wb') as f:
             etree.ElementTree(document).write(f, pretty_print=True)
