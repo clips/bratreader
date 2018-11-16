@@ -1,4 +1,4 @@
-from word import Word
+from bratreader.word import Word
 
 
 class Sentence(object):
