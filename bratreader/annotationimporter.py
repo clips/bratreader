@@ -2,8 +2,8 @@ import os
 
 from io import open
 from collections import OrderedDict, defaultdict
-from annotation import Annotation
-from sentence import Sentence
+from bratreader.annotation import Annotation
+from bratreader.sentence import Sentence
 
 
 def importann(pathtofile):
