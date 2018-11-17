@@ -7,7 +7,7 @@ Python code for reading Brat Repositories.
 
 # License
 
-MIT
+GPL v3.0
 
 # Installation
 
@@ -28,7 +28,9 @@ print(doc.sentences)    			# a list of sentences in document
 print(doc.annotations)  			# the annotation objects in a document
 
 # Save to XML
-r.save_xml("my_folder")
+r.save
+
+("my_folder")
 # This creates one XML document per original document
 # in the specified folder.
 ```
