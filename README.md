@@ -28,9 +28,7 @@ print(doc.sentences)    			# a list of sentences in document
 print(doc.annotations)  			# the annotation objects in a document
 
 # Save to XML
-r.save
-
-("my_folder")
+r.save("my_folder")
 # This creates one XML document per original document
 # in the specified folder.
 ```
