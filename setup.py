@@ -3,10 +3,10 @@ from setuptools import setup, find_packages
 
 setup(
     name='bratreader',
-    version='0.0',
-    author='Andrew Brooks',
-    description='installable version of clips/brat-reader',
+    version='1.0.1',
+    author='Computational Psycholinguistics Research Group (CLiPS)',
+    description='Supports saving and reading from XML files for easy access to annotations.',
     packages=find_packages(),
     python_requires='>=2.7',
-    license='MIT',
+    license='GPL-3.0',
 )
