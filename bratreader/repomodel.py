@@ -1,5 +1,5 @@
-from annotateddocument import AnnotatedDocument
-from annotationimporter import importann
+from bratreader.annotateddocument import AnnotatedDocument
+from bratreader.annotationimporter import importann
 from glob import iglob
 
 import os
