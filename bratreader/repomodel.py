@@ -33,13 +33,15 @@ class RepoModel(object):
 
         if os.path.isdir(pathtorepo):
             for path in iglob("{0}/*.ann".format(pathtorepo)):
-
-                # The key of each document is the document name without
-                # the suffix (i.e. "001.ann" becomes "001")
-                key = os.path.splitext(path)[0]
-                key = os.path.split(key)[-1]
-                context = importann(path)
-                self.documents[key] = AnnotatedDocument(key, context)
+                try:
+                    # The key of each document is the document name without
+                    # the suffix (i.e. "001.ann" becomes "001")
+                    key = os.path.splitext(path)[0]
+                    key = os.path.split(key)[-1]
+                    context = importann(path)
+                    self.documents[key] = AnnotatedDocument(key, context)
+                except Exception as e:
+                    print("Error parsing {}: {}\n".format(str(path), e))
 
         else:
             raise IOError(u"{0} is not a valid directory".format(pathtorepo))
