@@ -1,3 +1,4 @@
+import sys
 from bratreader.annotateddocument import AnnotatedDocument
 from bratreader.annotationimporter import importann
 from glob import iglob
@@ -40,8 +41,11 @@ class RepoModel(object):
                     key = os.path.split(key)[-1]
                     context = importann(path)
                     self.documents[key] = AnnotatedDocument(key, context)
-                except Exception as e:
-                    print("Error parsing {}: {}\n".format(str(path), e))
+                except KeyError as e:
+                    print("Parse error for document {}: {}, {} \n".format(str(path),
+                                                            str(e),
+                                                            sys.exc_info()[0])
+                                                            )
 
         else:
             raise IOError(u"{0} is not a valid directory".format(pathtorepo))
